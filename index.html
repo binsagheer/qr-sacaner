@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img  src="logo/—Pngtree—live streaming online logo_4341906.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Breth Nesh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Punemarrjes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Punemarrjes</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link profile-icon" href="#"><i class="fas fa-user-circle"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Sidebar -->
+            <aside class="col-lg-2 pt-4  col-sm-3 col-xsm-2 sidebar">
+                <button class="btn btn-custom w-100 mb-2">Shqiperia</button>
+                <button class="btn btn-custom w-100 mb-2">Kosova</button>
+                <button class="btn btn-custom w-100 mb-2">Diaspora</button>
+                <button class="btn btn-custom w-100 mb-2">Kompania</button>
+                <button class="btn btn-custom w-100 mb-2">Sezonale</button>
+                <button class="btn btn-custom w-100 mb-2">Nga Shtepia</button>
+            </aside>
+
+            <!-- Central Content -->
+            <main class="col-lg-10 col-sm-9 col-xsm-12">
+                <!-- Search Bar -->
+                <div class="container" id="search-bar">
+                    <!-- Job Search Bar -->
+                    <div class="row job-search-bar">
+                        <div class="col-12 d-flex p-4">
+                            <input type="text" id="jobSearch" class="form-control" placeholder="Search jobs by title, location, or company...">
+                            <!-- <button class="search-btn">Search</button> -->
+                            <div class="job-search-results" id="jobResults"></div>
+                        </div>
+                    </div>
+            
+                    <!-- Job Details Section (initially hidden) -->
+                    <div id="jobDetails" class="job-details" style="display: none;">
+                        <h3 id="jobTitle">Job Title</h3>
+                        <p id="jobCompany">Company</p>
+                        <p id="jobLocation">Location</p>
+                        <p id="jobStatus">Status: Open</p>
+                        <p id="jobDescription">Job Description</p>
+                        <div class="social-media">
+                            <a href="#" id="jobLinkedIn">LinkedIn</a>
+                            <a href="#" id="jobTwitter">Twitter</a>
+                            <a href="#" id="jobFacebook">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Listings -->
+                <div class="content-box">
+                    <div>
+                        <h5>Pozicioni</h5>
+                        <p>Kompania</p>
+                        <p>Lokacioni</p>
+                        <p>Paga</p>
+                    </div>
+                    <div class="logo-placeholder"><a href=""><img src="logo/—Pngtree—live streaming online logo_4341906.png" alt=""></a></div>
+                </div>
+                <div class="content-box">
+                    <div>
+                        <h5>Pozicioni</h5>
+                        <p>Kompania</p>
+                        <p>Lokacioni</p>
+                        <p>Paga</p>
+                    </div>
+                    <div class="logo-placeholder"><a href=""><img src="logo/—Pngtree—live streaming online logo_4341906.png" alt=""></a></div>
+                </div>
+                <div class="content-box">
+                    <div>
+                        <h5>Pozicioni</h5>
+                        <p>Kompania</p>
+                        <p>Lokacioni</p>
+                        <p>Paga</p>
+                    </div>
+                    <div class="logo-placeholder"><a href=""><img src="logo/—Pngtree—live streaming online logo_4341906.png" alt=""></a></div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Job search functionality
+        const jobs = [
+            {
+                title: 'Bank Teller',
+                company: 'Chase Bank',
+                location: 'New York, NY',
+                status: 'Open',
+                description: 'Responsible for providing excellent customer service, handling transactions, and balancing cash drawers.',
+                linkedin: 'https://linkedin.com/company/chase',
+                twitter: 'https://twitter.com/chase',
+                facebook: 'https://facebook.com/chase'
+            },
+            {
+                title: 'Loan Officer',
+                company: 'Wells Fargo',
+                location: 'Los Angeles, CA',
+                status: 'Open',
+                description: 'Assess and approve loan applications, ensuring compliance with regulations and company policies.',
+                linkedin: 'https://linkedin.com/company/wellsfargo',
+                twitter: 'https://twitter.com/wellsfargo',
+                facebook: 'https://facebook.com/wellsfargo'
+            },
+            {
+                title: 'Branch Manager',
+                company: 'Bank of America',
+                location: 'Chicago, IL',
+                status: 'Open',
+                description: 'Oversee daily operations of the branch, manage staff, and ensure excellent customer service.',
+                linkedin: 'https://linkedin.com/company/bankofamerica',
+                twitter: 'https://twitter.com/bankofamerica',
+                facebook: 'https://facebook.com/bankofamerica'
+            },
+            {
+                title: 'Credit Analyst',
+                company: 'Citibank',
+                location: 'Miami, FL',
+                status: 'Open',
+                description: 'Analyze credit data and financial information to assess the creditworthiness of potential borrowers.',
+                linkedin: 'https://linkedin.com/company/citibank',
+                twitter: 'https://twitter.com/citibank',
+                facebook: 'https://facebook.com/citibank'
+            },
+            {
+                title: 'Investment Banker',
+                company: 'Goldman Sachs',
+                location: 'San Francisco, CA',
+                status: 'Open',
+                description: 'Advise companies on mergers, acquisitions, and capital raising, ensuring strategic growth.',
+                linkedin: 'https://linkedin.com/company/goldmansachs',
+                twitter: 'https://twitter.com/goldmansachs',
+                facebook: 'https://facebook.com/goldmansachs'
+            },
+            {
+                title: 'Investment Banker',
+                company: 'Goldman Sachs',
+                location: 'San Francisco, CA',
+                status: 'Open',
+                description: 'Advise companies on mergers, acquisitions, and capital raising, ensuring strategic growth.',
+                linkedin: 'https://linkedin.com/company/goldmansachs',
+                twitter: 'https://twitter.com/goldmansachs',
+                facebook: 'https://facebook.com/goldmansachs'
+            },
+            {
+                title: 'Investment Banker',
+                company: 'Goldman Sachs',
+                location: 'San Francisco, CA',
+                status: 'Open',
+                description: 'Advise companies on mergers, acquisitions, and capital raising, ensuring strategic growth.',
+                linkedin: 'https://linkedin.com/company/goldmansachs',
+                twitter: 'https://twitter.com/goldmansachs',
+                facebook: 'https://facebook.com/goldmansachs'
+            },
+            {
+                title: 'Financial Advisor',
+                company: 'Morgan Stanley',
+                location: 'Boston, MA',
+                status: 'Open',
+                description: 'Provide financial planning and investment advice to clients, helping them achieve their financial goals.',
+                linkedin: 'https://linkedin.com/company/morganstanley',
+                twitter: 'https://twitter.com/morganstanley',
+                facebook: 'https://facebook.com/morganstanley'
+            },
+            {
+                title: 'Compliance Officer',
+                company: 'PNC Bank',
+                location: 'Atlanta, GA',
+                status: 'Open',
+                description: 'Ensure the bank complies with all applicable laws, regulations, and internal policies.',
+                linkedin: 'https://linkedin.com/company/pnc',
+                twitter: 'https://twitter.com/pnc',
+                facebook: 'https://facebook.com/pnc'
+            },
+            {
+                title: 'Mortgage Consultant',
+                company: 'Quicken Loans',
+                location: 'Detroit, MI',
+                status: 'Open',
+                description: 'Assist clients with mortgage applications and provide guidance throughout the mortgage process.',
+                linkedin: 'https://linkedin.com/company/quickenloans',
+                twitter: 'https://twitter.com/quickenloans',
+                facebook: 'https://facebook.com/quickenloans'
+            },
+            {
+                title: 'Risk Manager',
+                company: 'J.P. Morgan',
+                location: 'Dallas, TX',
+                status: 'Open',
+                description: 'Identify and mitigate risks associated with financial transactions and investment' ,
+linkedin: 'https://linkedin.com/company/jpmorgan',
+twitter: 'https://twitter.com/jpmorgan',
+facebook: 'https://facebook.com/jpmorgan'
+},
+{
+title: 'Treasury Analyst',
+company: 'Barclays',
+location: 'Seattle, WA',
+status: 'Open',
+description: 'Manage cash flow, liquidity, and financial risk for the bank, ensuring financial stability.',
+linkedin: 'https://linkedin.com/company/barclays',
+twitter: 'https://twitter.com/barclays',
+facebook: 'https://facebook.com/barclays'
+},
+{
+title: 'Wealth Manager',
+company: 'UBS',
+location: 'Houston, TX',
+status: 'Open',
+description: 'Provide personalized wealth management services to high-net-worth individuals and families.',
+linkedin: 'https://linkedin.com/company/ubs',
+twitter: 'https://twitter.com/ubs',
+facebook: 'https://facebook.com/ubs'
+},
+{
+title: 'Internal Auditor',
+company: 'HSBC',
+location: 'Philadelphia, PA',
+status: 'Open',
+description: 'Evaluate the effectiveness of the bank’s internal controls, risk management, and governance processes.',
+linkedin: 'https://linkedin.com/company/hsbc',
+twitter: 'https://twitter.com/hsbc',
+facebook: 'https://facebook.com/hsbc'
+}
+];
+
+    const jobSearch = document.getElementById('jobSearch');
+    const jobResults = document.getElementById('jobResults');
+    const jobDetails = document.getElementById('jobDetails');
+
+    jobSearch.addEventListener('input', () => {
+        const searchTerm = jobSearch.value.toLowerCase();
+        jobResults.innerHTML = '';
+        if (searchTerm) {
+            const filteredJobs = jobs.filter(job => 
+                job.title.toLowerCase().includes(searchTerm) || 
+                job.location.toLowerCase().includes(searchTerm) || 
+                job.company.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredJobs.length > 0) {
+                jobResults.style.display = 'block';
+                filteredJobs.forEach(job => {
+                    const jobItem = document.createElement('div');
+                    jobItem.className = 'job-item';
+                    jobItem.innerHTML = `<div class="job-title">${job.title}</div><div class="job-meta">${job.company} - ${job.location}</div>`;
+                    jobItem.addEventListener('click', () => showJobDetails(job));
+                    jobResults.appendChild(jobItem);
+                });
+            } else {
+                jobResults.style.display = 'block';
+                jobResults.innerHTML = '<div class="no-results">No jobs found for this search.</div>';
+            }
+        } else {
+            jobResults.style.display = 'none';
+        }
+    });
+
+    function showJobDetails(job) {
+    jobDetails.style.display = 'block';
+    jobResults.style.display = 'none'; 
+    document.getElementById('jobTitle').textContent = job.title;
+    document.getElementById('jobCompany').textContent = job.company;
+    document.getElementById('jobLocation').textContent = job.location;
+    document.getElementById('jobStatus').textContent = `Status: ${job.status}`;
+    document.getElementById('jobDescription').textContent = job.description;
+    document.getElementById('jobLinkedIn').href = job.linkedin;
+    document.getElementById('jobTwitter').href = job.twitter;
+    document.getElementById('jobFacebook').href = job.facebook;
+}
+jobSearch.addEventListener('input', () => {
+    const searchTerm = jobSearch.value.toLowerCase();
+    jobResults.innerHTML = '';
+    
+    if (searchTerm) {
+        const filteredJobs = jobs.filter(job => 
+            job.title.toLowerCase().includes(searchTerm) || 
+            job.location.toLowerCase().includes(searchTerm) || 
+            job.company.toLowerCase().includes(searchTerm)
+        );
+
+        if (filteredJobs.length > 0) {
+            jobResults.style.display = 'block';
+            filteredJobs.forEach(job => {
+                const jobItem = document.createElement('div');
+                jobItem.className = 'job-item';
+                jobItem.innerHTML = `<div class="job-title">${job.title}</div><div class="job-meta">${job.company} - ${job.location}</div>`;
+                jobItem.addEventListener('click', () => showJobDetails(job));
+                jobResults.appendChild(jobItem);
+            });
+        } else {
+            jobResults.style.display = 'block';
+            jobResults.innerHTML = '<div class="no-results">No jobs found for this search.</div>';
+        }
+    } else {
+        jobResults.style.display = 'none';
+        jobDetails.style.display = 'none'; // Hide job details when search bar is cleared
+    }
+});
+
+</script>
+</body>
+</html>
